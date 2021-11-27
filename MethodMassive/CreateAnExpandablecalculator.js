@@ -1,23 +1,14 @@
-// function Calculator(){
-//     this.calculate = function(str){
-//         let arr = str.split(' ');
-//         if ( arr[1] == "+") {
-//             return +arr[0] + +arr[2];
-//         } else {
-//             return +arr[0] - +arr[2];
-//         }
-//     }
-// }
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
 
-// let rer = ['1', '+', '2'];
-//
-// function cac(arr) {
-//     if ( arr[1] == "+") {
-//         return +arr[0] + +arr[2];
-//     } else {
-//         return +arr[0] - +arr[2];
-//     }
-// }
-// console.log(cac(rer));
+let arr = [ vasya, petya, masha ];
+function  sortByAge(array){
+    array.sort((a, b) => a.age - b.age);
+}
+sortByAge(arr);
 
-console.log(1 + 2);
+// теперь: [vasya, masha, petya]
+console.log(arr[0].name); // Вася
+console.log(arr[1].name); // Маша
+console.log(arr[2].name); // Петя
